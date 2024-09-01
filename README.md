@@ -5,19 +5,13 @@ This is a REST API designed for managing items and categories. It enables you to
 Requirements
 Node.js (v14.x or later)
 SQL Server (local or remote instance)
-Setup and Installation
-1. Setup Project Directory
-Run the following commands in your terminal to set up your project directory and install dependencies:
 
-mkdir web-management-api
-cd web-management-api
+1. Set Up API Files
+unzip API Files:
 
-2. Set Up API Files
-Copy API Files:
+unzip the all folders to your computer.
 
-Paste the all folders to 'web-management-api' folder.
-
-3. Initialize the Database
+2. Initialize the Database
 Follow these steps to create the database and tables using SQL Server Management Studio (SSMS):
 
 Open SQL Server Management Studio (SSMS):
@@ -92,7 +86,7 @@ INSERT INTO ItemVolumes (ItemId, Value, Price) VALUES (5, 'Basic', 60.00);
 INSERT INTO ItemVolumes (ItemId, Value, Price) VALUES (6, '4K', 400.00);
 GO
 
-4. Create a New SQL Server Login
+3. Create a New SQL Server Login
 Create a New Login:
 
 Navigate to 'Security' in the Object Explorer.
@@ -108,7 +102,7 @@ Set Default Database:
 Set the default database to 'WebManagementDB'.
 Click OK to create the login.
 
-5. Grant Permissions to the User
+4. Grant Permissions to the User
 Add User to Database:
 
 In SSMS, expand the “Databases” node.
@@ -127,10 +121,10 @@ Click “OK” to save the user settings.
 
 Run the Server:
 
-Open your terminal, navigate to the 'web-management-api' folder, and run:
+Open your terminal, navigate to the 'connectTask-main' folder, and run:
 node app.js
 
-6. Test API Endpoints
+5. Test API Endpoints
 Use Postman or any other API testing tool to test the following endpoints. Include the API key ('connect123') in the request headers:
 
 POST /items - Create or update an item.
